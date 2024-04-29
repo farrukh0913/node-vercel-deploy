@@ -36,7 +36,6 @@ const connect = async () => {
       }).catch((error) => {
         console.log("Connection failed!:", error);
       });
-  }
 };
 
 connect();
