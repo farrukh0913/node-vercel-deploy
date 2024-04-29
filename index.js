@@ -30,17 +30,17 @@ const port = 3000;
 // routes(app);
 const url = `mongodb+srv://wwwburjsoft:gBLTbWrZsDYS9kR5@cluster0.k2bwmju.mongodb.net/?retryWrites=true&w=majority`;
 
-mongoose.connect(
-  url
-).catch((e) => {
-  console.log("error connecting to mongoose!");
-});
-mongoose.connection.on("error", (e) => {
-  console.log("mongo connect error!");
-});
-mongoose.connection.on("connected", () => {
-  console.log("connected to mongo");
-});
+// mongoose.connect(
+//   url
+// ).catch((e) => {
+//   console.log("error connecting to mongoose!");
+// });
+// mongoose.connection.on("error", (e) => {
+//   console.log("mongo connect error!");
+// });
+// mongoose.connection.on("connected", () => {
+//   console.log("connected to mongo");
+// });
 
 
 server.listen(port, () => {
