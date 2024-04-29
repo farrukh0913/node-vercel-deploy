@@ -31,17 +31,13 @@ const port = 3000;
 const url = `mongodb+srv://wwwburjsoft:gBLTbWrZsDYS9kR5@cluster0.k2bwmju.mongodb.net/?retryWrites=true&w=majority`;
 
 const connect = async () => {
-  try {
       await mongoose.connect(url).then(() => {
         console.log("Connected to database!", url);
       }).catch((error) => {
         console.log("Connection failed!:", error);
       });
-  } catch(error) {
-      console.log('Problemas al conectarse a la DB. Error ->', error);
   }
 };
-
 
 connect();
 
