@@ -30,20 +30,18 @@ const port = 3000;
 // routes(app);
 const url = `mongodb+srv://wwwburjsoft:gBLTbWrZsDYS9kR5@cluster0.k2bwmju.mongodb.net/?retryWrites=true&w=majority`;
 
-const connect = async () => {
-      await mongoose.connect(url).then(() => {
-        console.log("Connected to database!", url);
-      }).catch((error) => {
-        console.log("Connection failed!:", error);
-      });
-};
+mongoose.connect(
+  url
+).catch((e) => {
+  console.log("error connecting to mongoose!");
+});
+mongoose.connection.on("error", (e) => {
+  console.log("mongo connect error!");
+});
+mongoose.connection.on("connected", () => {
+  console.log("connected to mongo");
+});
 
-try{
-  connect();
-}
-catch (error) {
-  console.error(error);
-}
 
 server.listen(port, () => {
   console.log(`Express server listening ${port}`);
