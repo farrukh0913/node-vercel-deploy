@@ -1,9 +1,7 @@
 const express = require('express');
 const mongoose = require("mongoose");
-const http = require("http");
 
 const app = express();
-const server = http.createServer(app);
 
 const port = 3000;
 // routes(app);
@@ -17,7 +15,7 @@ mongoose
     console.log("Connection failed!:", error);
   });
 
-server.listen(port, () => {
+  app.listen(port, () => {
   console.log(`Express server listening ${port}`);
 });
 
