@@ -28,7 +28,7 @@ app.use((req, res, next) => {
 
 const port = 3000;
 // routes(app);
-const url = `mongodb+srv://wwwburjsoft:gBLTbWrZsDYS9kR5@cluster0.k2bwmju.mongodb.net/?retryWrites=true&w=majority`;
+const url = ``; // mongo url
 mongoose
   .connect(url)
   .then(() => {
